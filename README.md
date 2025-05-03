@@ -22,7 +22,7 @@
 
   The score is updated dynamically and presented with color-coded indicators: red (low), yellow (moderate), and green (high).
 
-## Installation
+## Set-up
 
 1. Clone or download this repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
@@ -31,21 +31,8 @@
 
 ## Project Structure
 
-privacy_extension/
-├── background.js
-├── content.js
-├── fingerprint_protection.js
-├── blocklist/
-│ └── blocklist.js
-├── injected/
-│ ├── audio_protection.js
-│ └── fingerprint_protection.js
-├── popup/
-│ ├── popup.js
-│ ├── popup.html
-│ └── popup.css
-├── manifest.json
-└── icons/
+
+<pre> ```text privacy_extension/ ├── background.js ├── content.js ├── fingerprint_protection.js ├── blocklist/ │ └── blocklist.js ├── injected/ │ ├── audio_protection.js │ └── fingerprint_protection.js ├── popup/ │ ├── popup.js │ ├── popup.html │ └── popup.css ├── manifest.json └── icons/ ``` </pre>
 
 
 ## Acknowledgments
