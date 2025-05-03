@@ -31,7 +31,7 @@
 
 ## Project Structure
 
-<pre> ```
+<pre> 
 privacy_extension/
 ├── background.js
 ├── content.js
@@ -47,7 +47,7 @@ privacy_extension/
 │   └── popup.css
 ├── manifest.json
 └── icons/
-``` </pre>
+ </pre>
 
 ## Acknowledgments
 
