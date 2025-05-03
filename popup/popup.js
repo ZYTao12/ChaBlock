@@ -186,4 +186,54 @@ document.addEventListener('DOMContentLoaded', function() {
       cookieCount.textContent = 'Error detecting cookies';
     }
   });
+
+  function updatePrivacyScore() {
+    chrome.tabs.query({active: true, currentWindow: true}, async function(tabs) {
+      const tabId = tabs[0].id;
+      const result = await chrome.storage.local.get([
+        `privacyScore_${tabId}`,
+        `privacyScoreDetails_${tabId}`
+      ]);
+      const score = result[`privacyScore_${tabId}`] ?? 100;
+      const details = result[`privacyScoreDetails_${tabId}`];
+      
+      const privacyScore = document.getElementById('privacyScore');
+      const scoreDetails = document.getElementById('scoreDetails');
+      const blockedCount = document.getElementById('blockedCount');
+      
+      // Update blocked count from details
+      if (details && details.blockedTrackers) {
+        blockedCount.textContent = details.blockedTrackers;
+      }
+      
+      privacyScore.textContent = `Privacy Score: ${Math.round(score)}/100`;
+      
+      // Update score styling and message
+      if (score >= 80) {
+        privacyScore.className = 'score-good';
+        scoreDetails.textContent = 'This site has excellent privacy practices';
+      } else if (score >= 60) {
+        privacyScore.className = 'score-moderate';
+        scoreDetails.textContent = 'This site has moderate privacy concerns';
+      } else {
+        privacyScore.className = 'score-poor';
+        scoreDetails.textContent = 'This site has significant privacy issues';
+      }
+    });
+  }
+
+  // Call updatePrivacyScore initially and after relevant actions
+  updatePrivacyScore();
+
+  // Add to existing cookie clear listener
+  clearCookies.addEventListener('click', async function() {
+    // Existing cookie clearing code...
+    updatePrivacyScore();
+  });
+
+  // Add to existing protection toggle listener
+  protectionToggle.addEventListener('change', function() {
+    // Existing toggle code...
+    updatePrivacyScore();
+  });
 });

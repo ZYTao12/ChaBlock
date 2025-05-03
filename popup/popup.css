@@ -94,7 +94,8 @@ input:checked + .slider:before {
   max-width: 33%;
 }
 
-.cookie-icon {
+.cookie-icon,
+.score-icon {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -146,4 +147,34 @@ input:checked + .slider:before {
   color: #28a745;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.privacy-score-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.score-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+#privacyScore {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.score-good {
+  color: #28a745;
+}
+
+.score-moderate {
+  color: #ffc107;
+}
+
+.score-poor {
+  color: #dc3545;
 }

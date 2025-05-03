@@ -9,7 +9,8 @@
       "storage",
       "scripting",
       "tabs",
-      "cookies"
+      "cookies",
+      "webRequest"
     ],
     "host_permissions": ["<all_urls>"],
     "background": {
@@ -31,7 +32,8 @@
       "resources": [
         "injected/audio_protection.js", 
         "blocklist/easyprivacy.json",
-        "icons/icon_cookie.png"
+        "icons/icon_cookie.png",
+        "icons/icon_spillthetea.png"
       ],
       "matches": ["<all_urls>"]
     }],

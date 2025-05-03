@@ -49,3 +49,18 @@ observer.observe(document, {
   childList: true,
   subtree: true
 });
+
+window.addEventListener('message', function(event) {
+  if (event.data.type === 'FINGERPRINT_DETECTED') {
+    chrome.runtime.sendMessage({
+      type: 'FINGERPRINT_DETECTED',
+      api: event.data.api
+    });
+  }
+});
+
+// Inject fingerprinting detection script
+const fingerprintScript = document.createElement('script');
+fingerprintScript.src = chrome.runtime.getURL('injected/fingerprint_protection.js');
+(document.head || document.documentElement).appendChild(fingerprintScript);
+fingerprintScript.onload = () => fingerprintScript.remove();
