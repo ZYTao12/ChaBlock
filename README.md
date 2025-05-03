@@ -31,9 +31,23 @@
 
 ## Project Structure
 
-
-<pre> ```text privacy_extension/ ├── background.js ├── content.js ├── fingerprint_protection.js ├── blocklist/ │ └── blocklist.js ├── injected/ │ ├── audio_protection.js │ └── fingerprint_protection.js ├── popup/ │ ├── popup.js │ ├── popup.html │ └── popup.css ├── manifest.json └── icons/ ``` </pre>
-
+<pre> ```
+privacy_extension/
+├── background.js
+├── content.js
+├── fingerprint_protection.js
+├── blocklist/
+│   └── blocklist.js
+├── injected/
+│   ├── audio_protection.js
+│   └── fingerprint_protection.js
+├── popup/
+│   ├── popup.js
+│   ├── popup.html
+│   └── popup.css
+├── manifest.json
+└── icons/
+``` </pre>
 
 ## Acknowledgments
 
