@@ -1,0 +1,149 @@
+.container {
+  width: 300px;
+  padding: 15px;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.alert {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  color: #856404;
+}
+
+.stats {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.cookie-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.cookie-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon-container {
+  flex: 1;
+  max-width: 33%;
+}
+
+.cookie-icon {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.cookie-info {
+  flex: 2;
+}
+
+.cookie-details {
+  margin-top: 10px;
+}
+
+.cookie-details a {
+  color: #2196F3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cookie-details a:hover {
+  text-decoration: underline;
+}
+
+#cookieDomainList {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: #c82333;
+}
+
+.confirmation {
+  color: #28a745;
+  margin-top: 10px;
+  font-weight: bold;
+}

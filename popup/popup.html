@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Privacy Guard</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Privacy Guard</h2>
+    
+    <!-- Add cookie section -->
+    <div class="cookie-section">
+      <div class="cookie-header">
+        <div class="icon-container">
+          <img src="../icons/icon_cookie.png" alt="Cookie Icon" class="cookie-icon">
+        </div>
+        <div class="cookie-info">
+          <span id="cookieCount">This website serves 0 third-party cookies</span>
+          <div class="cookie-details">
+            <a href="#" id="showCookieDomains">Check where those cookies are from</a>
+            <div id="cookieDomainList" style="display: none;"></div>
+            <button id="clearCookies" class="button">Clear Third-Party Cookies</button>
+            <div id="clearConfirmation" class="confirmation" style="display: none;">
+              Now the cookies are gone!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <p>Trackers blocked: <span id="blockedCount">0</span></p>
+    </div>
+    <div class="setting">
+      <label class="switch">
+        <input type="checkbox" id="fingerprintProtection">
+        <span class="slider"></span>
+      </label>
+      <span>Fingerprint Protection</span>
+    </div>
+    <div id="audioDetection" class="alert" style="display: none;">
+      AudioContext usage detected on this site!
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
